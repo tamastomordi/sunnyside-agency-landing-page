@@ -1,0 +1,44 @@
+.header {
+   position: relative;
+   color: var(--clr-neutral-200);
+
+   .container {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+   }
+
+   .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1.5em 1em;
+   }
+
+   .nav-list {
+      display: none;
+   }
+
+   .toggle-nav {
+      height: 2em;
+      width: 2em;
+      cursor: pointer;
+      background: none;
+      border: none;
+   }
+
+   .banner {
+      font-size: 1em;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.2;
+      letter-spacing: 0.5em;
+      margin-top: 20%;
+   }
+
+   .decoration-arrow {
+      margin: 2em auto 0;
+   }
+}
