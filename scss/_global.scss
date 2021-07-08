@@ -16,3 +16,26 @@
    --ff-base: 'Barlow', sans-serif;
    --ff-heading: 'Fraunces', serif;
 }
+
+body {
+   font-family: var(--ff-base);
+   font-size: var(--fs-base);
+}
+
+h1, h2, h3 {
+   font-family: var(--ff-heading);
+}
+
+h1, h2 {
+   font-weight: 900;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a[class] {
+   text-decoration: none;
+}
