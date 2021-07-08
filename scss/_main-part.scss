@@ -60,6 +60,12 @@
             opacity: 0.25;
             z-index: -1;
             border-radius: 100vw;
+            transition: opacity 250ms ease;
+         }
+
+         &:hover::before,
+         &:focus::before {
+            opacity: 1;
          }
       }      
    }
