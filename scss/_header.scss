@@ -13,12 +13,53 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 1.5em 1em;
+
+      @media screen and (min-width: 48rem) {
+         padding: 3em 2em;
+
+         .logo {
+            width: 10em;
+         }
+      }
    }
 
    .nav-list {
       display: none;
+
+      @media screen and (min-width: 48rem) {
+         display: flex;
+         align-items: center;
+
+         .nav-item {
+            padding: 0 1.25em;
+
+            &:last-child {
+               padding-right: 0;
+            }
+         }
+
+         .nav-link {
+            color: inherit;
+         }
+
+         .nav-btn {
+            background: var(--clr-neutral-200); 
+            padding: 1em 2em;
+            border-radius: 100vw;
+            color: var(--clr-neutral-600);
+            font-family: var(--ff-heading);
+            text-transform: uppercase;
+            font-size: 0.8em;
+            transition: background 250ms ease, color 250ms ease;
+
+            &:hover,
+            &:focus {
+               background: hsla(0, 0%, 100%, .25);
+               color: white;
+            }
+         }
+      }
    }
 
    .toggle-nav {
@@ -27,15 +68,33 @@
       cursor: pointer;
       background: none;
       border: none;
+
+      @media screen and (min-width: 48rem) {
+         display: none;
+      }
    }
 
    .banner {
-      font-size: 1em;
+      font-size: 0.75em;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.2;
       letter-spacing: 0.5em;
-      margin-top: 20%;
+      margin: 20% auto 0;
+      max-width: 30ch;
+   
+      @media screen and (min-width: 21rem) {
+         font-size: 1em;
+      }      
+
+      @media screen and (min-width: 48rem) {
+         margin-top: 10%;
+         max-width: max-content;
+      }
+
+      @media screen and (min-width: 85rem) {
+         font-size: 1.5em;
+      }
    }
 
    .decoration-arrow {
