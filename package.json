@@ -1,0 +1,22 @@
+{
+  "name": "sunnyside-agency-landing-page",
+  "version": "1.0.0",
+  "description": "A Frontend Mentor challenge.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamastomordi/sunnyside-agency-landing-page.git"
+  },
+  "author": "Tamás Tömördi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamastomordi/sunnyside-agency-landing-page/issues"
+  },
+  "homepage": "https://github.com/tamastomordi/sunnyside-agency-landing-page#readme",
+  "dependencies": {
+    "sass": "^1.35.2"
+  }
+}
