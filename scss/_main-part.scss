@@ -102,11 +102,17 @@
       h2, p {
          color: var(--clr-primary-600);
       }
+      h2 {
+         text-shadow: 0 0 0.2em white;
+      }
    }
 
    article#photography .container {
       h2, p {
          color: var(--clr-primary-700);
+      }
+      h2 {
+         text-shadow: 0 0 0.2em white;
       }
    }
 
