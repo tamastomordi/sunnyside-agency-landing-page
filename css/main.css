@@ -88,6 +88,11 @@ select {
   --ff-base: "Barlow", sans-serif;
   --ff-heading: "Fraunces", serif;
 }
+@media screen and (min-width: 125rem) {
+  :root {
+    --fs-base: 1.8rem;
+  }
+}
 
 body {
   font-family: var(--ff-base);
@@ -151,7 +156,25 @@ a[class] {
     padding-right: 0;
   }
   .header .nav-list .nav-link {
+    position: relative;
+    z-index: 0;
     color: inherit;
+  }
+  .header .nav-list .nav-link::before {
+    content: "";
+    width: 100%;
+    height: 0.4em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--clr-primary-300);
+    opacity: 0;
+    border-radius: 100vw;
+    z-index: -1;
+    transition: opacity 250ms ease;
+  }
+  .header .nav-list .nav-link:hover::before, .header .nav-list .nav-link:focus::before {
+    opacity: 0.75;
   }
   .header .nav-list .nav-btn {
     background: var(--clr-neutral-200);
@@ -162,6 +185,9 @@ a[class] {
     text-transform: uppercase;
     font-size: 0.8em;
     transition: background 250ms ease, color 250ms ease;
+  }
+  .header .nav-list .nav-btn::before {
+    display: none;
   }
   .header .nav-list .nav-btn:hover, .header .nav-list .nav-btn:focus {
     background: rgba(255, 255, 255, 0.25);
@@ -207,6 +233,31 @@ a[class] {
 }
 .header .decoration-arrow {
   margin: 2em auto 0;
+}
+
+.mobile-nav {
+  max-height: 12em;
+  transition: max-height 750ms ease-in;
+  text-align: center;
+}
+.mobile-nav .mobile-nav-link {
+  display: block;
+  color: var(--clr-primary-700);
+  padding: 0.5em;
+  transition: background 250ms ease;
+}
+.mobile-nav .mobile-nav-link:hover, .mobile-nav .mobile-nav-link:focus {
+  background: var(--clr-primary-300);
+}
+@media screen and (min-width: 48rem) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.collapsed {
+  max-height: 0;
+  transition: max-height 750ms ease-out;
 }
 
 .main {
@@ -302,6 +353,18 @@ a[class] {
   left: 0;
   right: 0;
 }
+@media screen and (min-width: 10rem) {
+  .main article#graphic-design .container,
+.main article#photography .container {
+    top: 30%;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .main article#graphic-design .container,
+.main article#photography .container {
+    top: 50%;
+  }
+}
 @media screen and (min-width: 30rem) {
   .main article#graphic-design .container,
 .main article#photography .container {
@@ -323,8 +386,14 @@ a[class] {
 .main article#graphic-design .container h2, .main article#graphic-design .container p {
   color: var(--clr-primary-600);
 }
+.main article#graphic-design .container h2 {
+  text-shadow: 0 0 0.2em white;
+}
 .main article#photography .container h2, .main article#photography .container p {
   color: var(--clr-primary-700);
+}
+.main article#photography .container h2 {
+  text-shadow: 0 0 0.2em white;
 }
 .main .testimonials {
   text-align: center;
