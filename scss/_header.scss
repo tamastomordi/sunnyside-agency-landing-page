@@ -40,7 +40,28 @@
          }
 
          .nav-link {
+            position: relative;
+            z-index: 0;
             color: inherit;
+
+            &::before {
+               content: '';
+               width: 100%;
+               height: 0.4em;
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               background: var(--clr-primary-300);
+               opacity: 0;
+               border-radius: 100vw;
+               z-index: -1;
+               transition: opacity 250ms ease;
+            }
+
+            &:hover::before,
+            &:focus::before {
+               opacity: 0.75;
+            }
          }
 
          .nav-btn {
@@ -52,6 +73,10 @@
             text-transform: uppercase;
             font-size: 0.8em;
             transition: background 250ms ease, color 250ms ease;
+
+            &::before {
+               display: none;
+            }
 
             &:hover,
             &:focus {
