@@ -85,17 +85,11 @@
       left: 0;
       right: 0;
 
-      @media screen and (min-width: 30rem) {
-         top: 60%;
-      }
-
-      @media screen and (min-width: 48rem) {
-         top: 30%;
-      }
-
-      @media screen and (min-width: 65rem) {
-         top: 50%;
-      }
+      @media screen and (min-width: 10rem) { top: 30%; }
+      @media screen and (min-width: 20rem) { top: 50%; }
+      @media screen and (min-width: 30rem) { top: 60%; }
+      @media screen and (min-width: 48rem) { top: 30%; }
+      @media screen and (min-width: 65rem) { top: 50%; }
    }
 
    article#graphic-design .container {
