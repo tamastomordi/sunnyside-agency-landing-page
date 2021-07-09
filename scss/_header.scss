@@ -101,3 +101,30 @@
       margin: 2em auto 0;
    }
 }
+
+.mobile-nav {
+   max-height: 12em;
+   transition: max-height 750ms ease-in;
+   text-align: center;
+
+   .mobile-nav-link {
+      display: block;
+      color: var(--clr-primary-700);
+      padding: 0.5em;
+      transition: background 250ms ease;
+
+      &:hover,
+      &:focus {
+         background: var(--clr-primary-300);
+      }
+   }
+
+   @media screen and (min-width: 48rem) {
+      display: none;
+   }
+}
+
+.collapsed {
+   max-height: 0;
+   transition: max-height 750ms ease-out;
+}
